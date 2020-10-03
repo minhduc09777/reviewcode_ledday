@@ -37,7 +37,7 @@ int demt=0;
 int tongnhan=0;
 uint8_t ij=0;
 int i1,i2;
-char TT_XOA=0;
+unsigned long TT_XOA=0;
 extern	uint8_t mahoa[8];
  extern uint8_t baonap;
  extern const uint8_t pass[];
@@ -85,12 +85,6 @@ void EP1_OUT_Callback(void)
   USB_SIL_Read(EP1_OUT, USB_buff);	
 	if(dangnap==0)
 	{ 
-			Flash_CS_Low; 
-			Flash_CS_High;
-			//Delay(1000);
-			Flash_CS_Low; 
-			Flash_CS_High;
-			//Delay(1000);
 			demt=0;
 			tongnhan=0;
 			dangnap=1;
@@ -107,7 +101,13 @@ void EP1_OUT_Callback(void)
 		  mahoa[7] = pass[USB_buff[27]];
 			dangnap=1;
 			luu_flash();
-			TT_XOA=1;
+		 //TT_XOA = tongdata%262144;
+		 // if(TT_XOA==0) Flash_EraseSector(TT_XOA*262144);
+		 /* else{
+				 	for (i1 = 0; i1  < TT_XOA; i1 ++){
+					     Flash_EraseSector((i1+1)*262144);
+					}
+			}*/
 			//xoachip();
 			//Flash_EraseSector();
 			
@@ -120,7 +120,7 @@ void EP1_OUT_Callback(void)
 		if(demt>=32)			
 		{	
 			demt=0;
-      if(tongnhan%32==0) Flash_EraseSector(tongnhan*2048);
+      if(tongnhan%262144==0) Flash_EraseSector((tongnhan%262144)*2048);
 			Flash2048(data1,tongnhan*2048);			 
 			tongnhan++;
 			if(tongnhan>=tongdata)

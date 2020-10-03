@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\OBJ\STM32-NRF-USB.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\OBJ\STM32-NRF-USB.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Sep 06 20:08:05 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Oct 03 20:09:51 2020
 <BR><P>
 <H3>Maximum Stack Usage =        136 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -623,13 +623,11 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usb_istr.o(.data)
 </UL>
-<P><STRONG><a name="[5]"></a>EP1_OUT_Callback</STRONG> (Thumb, 298 bytes, Stack size 32 bytes, usb_endp.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = EP1_OUT_Callback &rArr; Flash2048 &rArr; Flash_PageWrite &rArr; Flash_WaitWriteEnd &rArr; Flash_SendByte
+<P><STRONG><a name="[5]"></a>EP1_OUT_Callback</STRONG> (Thumb, 270 bytes, Stack size 24 bytes, usb_endp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = EP1_OUT_Callback &rArr; Flash2048 &rArr; Flash_PageWrite &rArr; Flash_WaitWriteEnd &rArr; Flash_SendByte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SIL_Read
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEPRxStatus
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_fill_led
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;luu_flash
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_EraseSector
@@ -1426,8 +1424,7 @@ Global Symbols
 <P><STRONG><a name="[155]"></a>GPIO_ReadOutputData</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
 <P><STRONG><a name="[72]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP1_OUT_Callback
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xoachip
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_EraseSector
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_PageWrite
@@ -1437,8 +1434,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[71]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP1_OUT_Callback
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xoachip
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_EraseSector
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_PageWrite
