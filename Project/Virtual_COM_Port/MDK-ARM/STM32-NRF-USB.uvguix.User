@@ -89,8 +89,8 @@
       <flags>2</flags>
       <showCmd>3</showCmd>
       <MinPosition>
-        <xPos>-1</xPos>
-        <yPos>-1</yPos>
+        <xPos>-32000</xPos>
+        <yPos>-32000</yPos>
       </MinPosition>
       <MaxPosition>
         <xPos>-1</xPos>
@@ -3602,8 +3602,8 @@
       <ActiveTab>3</ActiveTab>
       <Doc>
         <Name>..\src\main.c</Name>
-        <ColumnNumber>19</ColumnNumber>
-        <TopLine>349</TopLine>
+        <ColumnNumber>0</ColumnNumber>
+        <TopLine>348</TopLine>
         <CurrentLine>355</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
@@ -3621,7 +3621,7 @@
       <Doc>
         <Name>..\..\..\Libraries\STM32_USB-FS-Device_Driver\inc\usb_lib.h</Name>
         <ColumnNumber>19</ColumnNumber>
-        <TopLine>17</TopLine>
+        <TopLine>29</TopLine>
         <CurrentLine>18</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
@@ -3629,9 +3629,9 @@
       </Doc>
       <Doc>
         <Name>..\src\usb_endp.c</Name>
-        <ColumnNumber>28</ColumnNumber>
-        <TopLine>114</TopLine>
-        <CurrentLine>127</CurrentLine>
+        <ColumnNumber>19</ColumnNumber>
+        <TopLine>116</TopLine>
+        <CurrentLine>129</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -3639,7 +3639,7 @@
       <Doc>
         <Name>..\src\usb_istr.c</Name>
         <ColumnNumber>44</ColumnNumber>
-        <TopLine>5</TopLine>
+        <TopLine>29</TopLine>
         <CurrentLine>6</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
