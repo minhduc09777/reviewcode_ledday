@@ -3629,7 +3629,7 @@
       </Doc>
       <Doc>
         <Name>..\src\usb_endp.c</Name>
-        <ColumnNumber>19</ColumnNumber>
+        <ColumnNumber>33</ColumnNumber>
         <TopLine>116</TopLine>
         <CurrentLine>129</CurrentLine>
         <Folding>1</Folding>
