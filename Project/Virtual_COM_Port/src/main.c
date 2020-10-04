@@ -6,7 +6,7 @@
 #include "hw_config.h"
 #include "usb_pwr.h"
 #include "math.h"
- #include <stdio.h>
+#include <stdio.h>
 #include "stm32f10x_spi.h"
 #include "stm32f10x_dma.h"
  #include "stm32f10x_flash.h"
@@ -828,6 +828,7 @@ void send1903m24(int count,uint8_t bit)// what is difference m8/m24
 	 d1_b=data1[(k*3+2)]/bit;
 	 da1=d1_r<<16 | d1_g<<8 | d1_b;
    d2_r=data2[(k*3+0)]/bit;
+
 	 d2_g=data2[(k*3+1)]/bit;
 	 d2_b=data2[(k*3+2)]/bit;
 	 da2=d2_r<<16 | d2_g<<8 | d2_b;
@@ -1070,7 +1071,7 @@ void giaima(uint8_t da,int bd,int tong)
 	}
 			 
 }
-
+unsigned char demloi[]={1,1,1,1};
 void readbandau(void)
 {
 	 int i,j;
@@ -1092,6 +1093,8 @@ void readbandau(void)
 		while(1)
 		{
 		 	loi(); // if error happens 
+		//	printf("loi L E D ");
+			demloi[0]=0;
 		}
 	} 
 	loaiden=data1[3];
@@ -1118,27 +1121,30 @@ void readbandau(void)
   
 	if(tong_play<=0)
 	{
-			while(1)
-				{
-						loi();
-	
-				}
+		while(1)
+		{
+				loi();
+	//      printf("loi tong play < 0");
+			  demloi[1]=0;
+		}
 	}
 	if(loaiday==1 &&den_trungbinh>6144 )
 	{
 			while(1)
-				{
-						loi();
-	
-				}
+			{
+				loi();
+		//		printf("loi loaiday==1 && den_trungbinh>6144: %d ",den_trungbinh);
+				demloi[2]=0;
+			}
 	}
 	if(loaiday==0 &&den_trungbinh>3072 )
 	{
 			while(1)
-				{
-						loi();
-	
-				}
+			{
+				loi();
+			//	printf("loaiday==0 &&den_trungbinh>3072: %d ",den_trungbinh);
+				demloi[3]=0; 
+			}
 	}
 	
 
@@ -1147,8 +1153,8 @@ void readbandau(void)
 		data1[i]=0;
 		data2[i]=0;
 	}
-	 
- set_led(loaiden);
+  set_led(loaiden);
+//	printf("success :)");
 }
 
 int main(void)
@@ -1243,7 +1249,7 @@ LED1_0;LED2_0;LED3_0;LED4_0;LED5_0;
   Delay(50000);
   Flash_CS_Low; 
   Flash_CS_High;
- //loi();
+//  loi();
   readbandau();
 	
 	while (1)

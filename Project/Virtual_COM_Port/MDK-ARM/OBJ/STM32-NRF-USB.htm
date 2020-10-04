@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\OBJ\STM32-NRF-USB.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\OBJ\STM32-NRF-USB.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Oct 03 22:17:04 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Oct 04 20:58:00 2020
 <BR><P>
 <H3>Maximum Stack Usage =        136 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -519,7 +519,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[87]"></a>readbandau</STRONG> (Thumb, 356 bytes, Stack size 24 bytes, main.o(.text))
+<P><STRONG><a name="[87]"></a>readbandau</STRONG> (Thumb, 386 bytes, Stack size 24 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = readbandau &rArr; Flash_Read &rArr; stm32_dma_transfer &rArr; DMA_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;loi
@@ -539,7 +539,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4f]"></a>main</STRONG> (Thumb, 1652 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[4f]"></a>main</STRONG> (Thumb, 1668 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = main &rArr; readbandau &rArr; Flash_Read &rArr; stm32_dma_transfer &rArr; DMA_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Init
@@ -623,7 +623,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usb_istr.o(.data)
 </UL>
-<P><STRONG><a name="[5]"></a>EP1_OUT_Callback</STRONG> (Thumb, 258 bytes, Stack size 24 bytes, usb_endp.o(.text))
+<P><STRONG><a name="[5]"></a>EP1_OUT_Callback</STRONG> (Thumb, 262 bytes, Stack size 24 bytes, usb_endp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = EP1_OUT_Callback &rArr; Flash2048 &rArr; Flash_PageWrite &rArr; Flash_WaitWriteEnd &rArr; Flash_SendByte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SIL_Read

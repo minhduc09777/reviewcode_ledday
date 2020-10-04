@@ -121,14 +121,14 @@ void EP1_OUT_Callback(void)
 		{	
 			demt=0;
 			
-			//262144
-      /*if(tongnhan==0){ 
+
+     if(tongnhan==0){ 
 			   Flash_EraseSector(0);
 			}
-			else if(tongnhan%128 > 0){
-			   Flash_EraseSector((tongnhan%128) *65536);
-		  }*/
-			if(tongnhan%128==0)Flash_EraseSector(tongnhan*2048);
+			else if(tongnhan%32==0){
+			   Flash_EraseSector(tongnhan*2048);
+		  }
+			//if(tongnhan%128==0)Flash_EraseSector(tongnhan*2048);
 			Flash2048(data1,tongnhan*2048);			 
 			tongnhan++;
 			if(tongnhan>=tongdata)
