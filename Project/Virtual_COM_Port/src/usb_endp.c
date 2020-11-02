@@ -115,7 +115,7 @@ void EP1_OUT_Callback(void)
 	}
 	else
 	{
-	  for (i1 = 0; i1  < 64; i1 ++)	data1[i1+demt*64]=USB_buff[i1]; 
+	 for (i1 = 0; i1  < 64; i1 ++)	data1[i1+demt*64]=USB_buff[i1]; 
 		demt++;
 		if(demt>=32)			
 		{	
