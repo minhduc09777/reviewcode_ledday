@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\OBJ\STM32-NRF-USB.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\OBJ\STM32-NRF-USB.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Nov 01 23:17:54 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Nov 14 18:16:43 2020
 <BR><P>
 <H3>Maximum Stack Usage =        136 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -500,7 +500,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readbandau
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EP1_OUT_Callback
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readbandau
 </UL>
 
 <P><STRONG><a name="[86]"></a>nhay_doi</STRONG> (Thumb, 234 bytes, Stack size 28 bytes, main.o(.text))
@@ -623,11 +624,12 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usb_istr.o(.data)
 </UL>
-<P><STRONG><a name="[5]"></a>EP1_OUT_Callback</STRONG> (Thumb, 262 bytes, Stack size 24 bytes, usb_endp.o(.text))
+<P><STRONG><a name="[5]"></a>EP1_OUT_Callback</STRONG> (Thumb, 300 bytes, Stack size 24 bytes, usb_endp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = EP1_OUT_Callback &rArr; Flash2048 &rArr; Flash_PageWrite &rArr; Flash_WaitWriteEnd &rArr; Flash_SendByte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SIL_Read
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEPRxStatus
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;loi
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_fill_led
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;luu_flash
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_EraseSector

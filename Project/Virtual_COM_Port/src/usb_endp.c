@@ -30,7 +30,7 @@ unsigned char USB_buff [64];
 char kkt=0;
 int tongtruyen=0;
 extern uint8_t data1[3072];
-
+int itang=0;
 
 uint8_t flag = 0;
 int demt=0;
@@ -48,6 +48,7 @@ extern void Delay(uint32_t num);
 extern void  xoachip();
 extern uint8_t dangnap;
 extern void luu_flash();
+extern void loi();
 extern uint8_t vantoc;
 extern uint8_t dosang;
 int tongdata=0;
@@ -100,7 +101,15 @@ void EP1_OUT_Callback(void)
 		  mahoa[6] = pass[USB_buff[26]];
 		  mahoa[7] = pass[USB_buff[27]];
 			dangnap=1;
+		  if(USB_buff[9] != 'C' || USB_buff[10] != 'H' || USB_buff[11] != 'E' || USB_buff[12] != 'C' || USB_buff[13] != 'K')
+			{
+				  
+			    while(1){
+					   loi();
+					}
+			}
 			luu_flash();
+		   
 		 //TT_XOA = tongdata%262144;
 		 // if(TT_XOA==0) Flash_EraseSector(TT_XOA*262144);
 		 /* else{
@@ -120,7 +129,6 @@ void EP1_OUT_Callback(void)
 		if(demt>=32)			
 		{	
 			demt=0;
-			
 
      if(tongnhan==0){ 
 			   Flash_EraseSector(0);
